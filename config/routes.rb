@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # Essentially the home page
   get "/products", to: "products#index"
+  root "products#index"
 
   # This allows the user to fill out a form and POST
   get "/products/new", to: "products#new"
