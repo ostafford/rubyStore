@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Essentially the home page
-  get "/products", to: "products#index"
+  get "/products", to: "products#index", as: :products
   root "products#index"
 
   # This allows the user to fill out a form and POST
-  get "/products/new", to: "products#new"
+  get "/products/new", to: "products#new", as: :new_product
   post "/products", to: "products#create"
 
   # Searching for a created (POST) query (:id)
-  get "/products/:id", to: "products#show"
+  get "/products/:id", to: "products#show", as: :product
 
   # Allowing the user to edit/update the searched item
   # Remember that you have to .find the item first then PATCH/PUT
