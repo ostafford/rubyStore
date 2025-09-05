@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # Allowing the user to edit/update the searched item
   # Remember that you have to .find the item first then PATCH/PUT
-  get "/products/:id/edit", to: "products#edit"
+  get "/products/:id/edit", to: "products#edit", as: :edit_product
   patch "/products/:id", to: "products#update"
   put "/products/:id", to: "products#update"
 
